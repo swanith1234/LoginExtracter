@@ -1,0 +1,6 @@
+{
+  "type": "single-step",
+  "email": "#login_field",
+  "password": "#password",
+  "submit": "input[name=\"commit\"]"
+}

@@ -1,0 +1,112 @@
+multi_step_login:
+  steps: 2
+  step_1:
+    field_type: username
+    field_patterns:
+      - input[name='username']
+      - input[type='text']
+    submit_patterns:
+      - button:has-text('Next')
+      - button[type='submit']
+  step_2:
+    field_type: password
+    field_patterns:
+      - input[name="password"]
+      - input[type="password"]
+      -  #lg-passwordinput-1
+    submit_patterns:
+      - text="Login"
+      - button:has-text("Login")
+      - button[type="submit"]
+facebook.com:
+  url: https://www.facebook.com/login
+  simple_login:
+    username_patterns:
+      - input[name='email']
+      - input[placeholder*='Email']
+      - input[type='text']
+    password_patterns:
+      - input[name='pass']
+      - input[placeholder='Password']
+      - input[type='password']
+    submit_patterns:
+      - button[type='submit']
+      - button:has-text('Log in')
+github.com:
+  url: https://github.com/login
+  simple_login:
+    username_patterns:
+      - input[name='login']
+      - input[type='text']
+    password_patterns:
+      - input[name='password']
+      - input[type='password']
+    submit_patterns:
+      - input[name='commit']
+      - input[type='submit']
+accounts.google.com:
+  url: https://accounts.google.com/v3/signin/identifier?dsh=S1879858842%3A1764684873084494&ifkv=ARESoU0H5ZwPxr37q-mD91e_k32zFm3mMpFKFmxhZ2FOlc8ff7ddhaZtSd6ERFamrNLC5PfkbNv_ew&flowName=GlifWebSignIn&flowEntry=ServiceLogin
+  multi_step_login:
+    steps: 2
+    step_1:
+      field_type: username
+      field_patterns:
+        - input[type='email']
+        - input[name='identifier']
+        - input[aria-label*='Email']
+      submit_patterns:
+        - button:has-text('Next')
+    step_2:
+      field_type: password
+      field_patterns:
+        - input[type="password"]
+      submit_patterns:
+        - text="Next"
+        - button:has-text("Next")
+instagram.com:
+  url: https://www.instagram.com/accounts/login/
+  simple_login:
+    username_patterns:
+      - input[name="username"]
+      - input[type="text"]
+      - input[aria-label*='username']
+      - input[aria-label*='email']
+      - input[aria-label*='Phone number']
+    password_patterns:
+      - input[name="password"]
+      - input[type="password"]
+      - input[aria-label="Password"]
+    submit_patterns:
+      - text="Log in"
+      - button:has-text("Log in")
+      - button[type='submit']
+slack.com:
+  url: https://slack.com/signin#/signin
+  simple_login:
+    username_patterns:
+      - input[type='email']
+      - input[name='email']
+      - input[placeholder*='Email']
+    password_patterns:
+    submit_patterns:
+      - button[type='submit']
+      - button:has-text('Sign In With Email')
+id.atlassian.com:
+  url: https://id.atlassian.com/login
+  simple_login:
+    username_patterns:
+    password_patterns:
+    submit_patterns:
+passport.yandex.com:
+  url: https://passport.yandex.com/auth
+  simple_login:
+    username_patterns:
+      - input[name="login"]
+      - input[placeholder*='email']
+      - input[type='text']
+    password_patterns:
+      - input[name="hidden-password"]
+      - input[type='password']
+    submit_patterns:
+      - button[type='submit']
+      - button:has-text('Log in')

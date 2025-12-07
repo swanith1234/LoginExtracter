@@ -15,7 +15,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const DEFAULT_SAVE_JSON = path.join(process.cwd(), "login_pattern.json");
 const DEFAULT_SAVE_YAML = path.join(process.cwd(), "login_pattern.yaml");
 const GEMINI_KEY =
-  process.env.GEMINI_API_KEY || "AIzaSyAdiCRtQr59NFbagewPzCpDZi1ByX_325Y";
+  process.env.GEMINI_API_KEY || "GEMINI_API_KEY";
 const GEMINI_MODEL = "gemini-2.0-flash";
 
 /* ---------------------------
